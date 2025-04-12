@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH TUBE</title>
-    <link rel="stylesheet" href="src/output.css">
-</head>
-<body>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="w-11/12 mx-auto flex justify-between items-center border-b-2 border-ph-border py-8 ">
+        <div class="logo">
+            <img class="w-[120px] " src="./resources/Logo.png" alt="">
+        </div>
+        <div class="sort">
+            <button class="btn">Sort By View</button>
+        </div>
+        <div class="blogs">
+            <button class="btn bg-ph-red text-white">Blogs</button>
+        </div>
+      </nav>
+    </header>
 
+    <nav id="category-container" class="flex py-5 justify-center gap-5">
+      <div>
+        <button class="btn btn-sm bg-ph-red text-white">All</button>
+      </div>
+    </nav>
 
-    
+    <section id="video-container">
+      
+    </section>
+
     <script src="script/app.js"></script>
-</body>
+  </body>
 </html>
