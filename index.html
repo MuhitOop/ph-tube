@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" >
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH TUBE</title>
     <link rel="stylesheet" href="src/output.css" />
+
+    <style>
+      .active{
+        background:rgb(255, 31, 61);
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav class="w-11/12 mx-auto flex justify-between items-center border-b-2 border-ph-border py-8 ">
+      <nav
+        class="w-11/12 mx-auto flex justify-between items-center border-b-2 border-ph-border py-8"
+      >
         <div class="logo">
-            <img class="w-[120px] " src="./resources/Logo.png" alt="">
+          <img class="w-[120px]" src="./resources/Logo.png" alt="" />
         </div>
         <div class="sort">
-            <button class="btn">Sort By View</button>
+          <button class="btn">Sort By View</button>
         </div>
         <div class="blogs">
-            <button class="btn bg-ph-red text-white">Blogs</button>
+          <button class="btn bg-ph-red text-white">Blogs</button>
         </div>
       </nav>
     </header>
 
     <nav id="category-container" class="flex py-5 justify-center gap-5">
       <div>
-        <button class="btn btn-sm bg-ph-red text-white">All</button>
+        <button id="btn-all" class="btn btn-sm" onclick="loadVideos()">All</button>
       </div>
     </nav>
 
-    <section id="video-container">
-      
+    <section
+      id="video-container"
+      class="w-11/12 mx-auto grid grid-cols-4 gap-5"
+    >
+     <div class="py-20 col-span-full text-center flex flex-col justify-center items-center ">
+      <img class="w-[120px]" src="resources/Icon.png" alt="">
+      <h1 class="text-2xl font-bold">Oops!! Sorry, There is no <br> content here</h1>
+     </div>
     </section>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+<dialog id="video_details" class="modal">
+  <div class="modal-box">
+    <div id="details-container">
+
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
 
     <script src="script/app.js"></script>
   </body>
